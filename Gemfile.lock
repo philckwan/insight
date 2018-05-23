@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     backports (3.11.3)
     builder (3.2.3)
@@ -43,25 +44,28 @@ GEM
       data_magic (>= 0.22)
     power_assert (1.1.1)
     require_all (2.0.0)
-    rspec (3.7.0)
-      rspec-core (~> 3.7.0)
-      rspec-expectations (~> 3.7.0)
-      rspec-mocks (~> 3.7.0)
-    rspec-core (3.7.1)
-      rspec-support (~> 3.7.0)
-    rspec-expectations (3.7.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.7.0)
-    rspec-mocks (3.7.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.7.0)
-    rspec-support (3.7.1)
+    rr (1.2.1)
     rubyzip (1.2.1)
     selenium-webdriver (3.12.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     test-unit (3.2.7)
       power_assert
+    test-unit-context (0.5.1)
+      test-unit (>= 2.4.0)
+    test-unit-full (0.0.5)
+      test-unit
+      test-unit-context
+      test-unit-notify
+      test-unit-rr
+      test-unit-runner-tap
+    test-unit-notify (1.0.4)
+      test-unit (>= 2.4.9)
+    test-unit-rr (1.0.5)
+      rr (>= 1.1.1)
+      test-unit (>= 2.5.2)
+    test-unit-runner-tap (1.1.2)
+      test-unit
     watir (6.10.3)
       selenium-webdriver (~> 3.4, >= 3.4.1)
     yml_reader (0.7)
@@ -70,14 +74,15 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  concurrent-ruby
   cucumber
   env
   lib
   page-object
   require_all
-  rspec
   test-unit
+  test-unit-full
   watir
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

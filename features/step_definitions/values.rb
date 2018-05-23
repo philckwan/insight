@@ -1,11 +1,15 @@
 require 'watir'
 require 'cucumber'
 require 'test/unit'
+require 'test-unit'
+
+World(Test::Unit::Assertions)
 
 Given(/^a Chrome web browser$/) do
   #visit ValuesPage
-  @WEBSITE = 'https://www.exercise1.com/values'
+  #@WEBSITE = 'https://www.exercise1.com/values'
   #@WEBSITE = 'C:/Users/Philip/RubymineProjects/insight/insight.html' # local html file for test spec
+  @WEBSITE = 'C:/Users/pkwan1/workspace/insight/insight/insight.html'
   @browser = Watir::Browser.new :chrome
 end
 
